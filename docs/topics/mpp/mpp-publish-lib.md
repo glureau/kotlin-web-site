@@ -65,7 +65,7 @@ kotlin {
     mingwX64()
     linuxX64()
     def publicationsFromMainHost = 
-        [jvm(), js()].collect { it.name } + "kotlinMultiplatform"
+        [jvm(), js()].collect { it.name + "kotlinMultiplatform" }
     publishing {
         publications {
             matching { it.name in publicationsFromMainHost }.all { targetPublication ->
